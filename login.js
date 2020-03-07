@@ -11,7 +11,7 @@ function signin() {
         
         console.log(token)
         console.log(user)
-        window.location.href = "home.html";
+        window.location.href = "https://mehekmaley.github.io/djcsi/home.html";
       }).catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -31,7 +31,7 @@ var logout = document.getElementById('logout');
 firebase.auth().onAuthStateChanged(function(user) {
     if(user) {
      
-         window.location.href = 'home.html';
+         window.location.href = 'https://mehekmaley.github.io/djcsi/home.html';
         console.log("good")
     
       
