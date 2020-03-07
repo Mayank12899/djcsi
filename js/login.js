@@ -38,7 +38,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
     else{
       console.log("bad")
-      window.location.href = 'https://mehekmaley.github.io/djcsi/index.html';
+      
     }
     });
     
