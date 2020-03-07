@@ -31,7 +31,7 @@ var logout = document.getElementById('logout');
 firebase.auth().onAuthStateChanged(function(user) {
     if(user) {
      
-         window.location.href = 'https://mehekmaley.github.io/djcsi/home.html';
+        window.location.href = 'https://mehekmaley.github.io/djcsi/home.html';
         console.log("good")
     
       
