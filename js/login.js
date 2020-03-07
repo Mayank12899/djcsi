@@ -28,7 +28,7 @@ var logout = document.getElementById('logout');
 firebase.auth().onAuthStateChanged(function(user) {
     if(user) {
      
-        window.location.href = 'home.html';
+        document.getElementById("login_div").style.display = "none";
         console.log("good")
     
       
