@@ -11,7 +11,7 @@ function signin() {
         
         console.log(token)
         console.log(user)
-        window.location.href = "index.html";
+        window.location.href = "home.html";
       }).catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -31,13 +31,14 @@ var logout = document.getElementById('logout');
 firebase.auth().onAuthStateChanged(function(user) {
     if(user) {
      
-        // window.location.href = 'index.html';
+        window.location.href = 'home.html';
         console.log("good")
     
       
     }
     else{
       console.log("bad")
+      window.location.href = 'index.html';
     }
     });
     
