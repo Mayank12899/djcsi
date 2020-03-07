@@ -22,7 +22,7 @@ function signin() {
           
         console.log(error.code)
         console.log(error.message)
-     });.catch(function(error) {
+     }).catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
           
