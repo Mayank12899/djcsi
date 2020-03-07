@@ -4,15 +4,25 @@ login.addEventListener('click',signin);
 
 function signin() {
     console.log("hello")
-    firebase.auth().signInWithPopup(provider).then(function(result){
-        console.log("hgfh");
-        var token = result.credential.accessToken;
-        var user = result.user;
-        
-        console.log(token)
-        console.log(user)
-        window.location.href = "https://mehekmaley.github.io/djcsi/home.html";
-      }).catch(function(error) {
+    
+    var userEmail = document.getElementById("nname").value;
+    var userPass = document.getElementById("fnumb").value;
+  
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      
+      window.alert("Error : " + errorMessage);
+  
+      // ...
+    }).catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+          
+        console.log(error.code)
+        console.log(error.message)
+     });.catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
           
