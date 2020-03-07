@@ -16,19 +16,7 @@ function signin() {
       window.alert("Error : " + errorMessage);
   
       // ...
-    }).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-          
-        console.log(error.code)
-        console.log(error.message)
-     }).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-          
-        console.log(error.code)
-        console.log(error.message)
-     });
+    });
 }
 var logout = document.getElementById('logout');
     logout.addEventListener('click',logo)
