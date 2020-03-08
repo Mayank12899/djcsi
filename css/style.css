@@ -13,6 +13,43 @@
 html {
   overflow-x: hidden;
 }
+#login_div{
+  display: block;
+}
+#joke{
+  display: none;
+  
+}
+#fquiz{
+  display: none;
+  
+}
+#mychart{
+  display: none;
+  
+}
+#music{
+  display: none;
+  
+}
+#mythnfact{
+  display: none;
+  
+}
+
+#home{
+  display: none;
+  margin-left: 50px;
+
+}
+/* #cbt{
+  
+  width: 400px;height: 450px;overflow: auto;
+
+} */
+/* .userInput{float: left;}
+.responseData{float:right};
+#input { width: 500px; } */
 
 .download-btn-first {
   background: #f7f7f7;
