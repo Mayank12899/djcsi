@@ -36,9 +36,30 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+	
+	
+	<style>
+		iframe { 
+            margin: 0px; 
+            padding: 0px; 
+            height: 100%; 
+            border: none; 
+        } 
+          
+        iframe { 
+            display: block; 
+            width: 100%; 
+            border: none; 
+            overflow-y: auto; 
+            overflow-x: hidden; 
+        } 
+	</style>
+	
+	
 </head>
 <body>
 
@@ -60,16 +81,25 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav nav-items-center ml-auto mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="#" onclick="home1()">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#" onclick="$('#fh5co-features').goTo();return false;">Features</a>
+						<a class="nav-link" href="#" onclick="cbt()">Cognitive Behavioural Therapy</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#" onclick="$('#fh5co-reviews').goTo();return false;">Reviews</a>
+						<a class="nav-link" href="#" onclick="openjoke()">Let's Laugh</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#"  onclick="$('#fh5co-download').goTo();return false;">Download</a>
+						<a class="nav-link" href="#"  onclick="facts()">Myths & Facts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" onclick="omusic()">Relax with Music</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" onclick="chartIt()">Insights</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" onclick="logo()">Sign Out</a>
 					</li>
 				</ul>
 				<!-- <div class="social-icons-header">
@@ -95,18 +125,45 @@
 					Login with Google</button>
 	
 			</div>
-		</br>
-			<div class="col s12 m6 offset-m3 center-align" >
-				
-				<button type="button" class="btn btn-default" id="logout">
-					<img width="20px" style="margin-top:7px; margin-right:5px" alt="Google sign-in" 
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-				
-				Logout</button>
-
-		</div>
+		
+			
 			</div>
 		</nav>
+		<div id="home">
+			<button type="button" class="btn btn-primary btn-lg" style="width: 40%;height: 40%; margin-top: 40%;" >CBT</button>
+			<button type="button" class="btn btn-success btn-lg" style="width: 40%;height: 40%; margin-left: 20px; margin-top: 40%;" id="ojoke">Let's Laugh</button>
+			<button type="button" class="btn btn-warning btn-lg" style="width: 40%;height: 40%; margin-top: 20%;color: white;font-size: medium;" id="fm">Myths & Facts</button>
+			<button type="button" class="btn btn-info btn-lg" id="mmusic" style="width: 40%;height: 40%; margin-top: 20%;margin-left: 20px;font-size: medium;">Relax in Music</button>
+			<button type="button" class="btn btn-danger btn-lg" id="fquizb" style="width: 40%;height: 40%; margin-top: 20%;">Fun Quiz</button>
+			<button type="button" class="btn btn-secondary btn-lg" style="width: 40%;height: 40%; margin-left: 20px; margin-top: 20%;" id="ins">Insights</button>
+			
+		</div>
+		<div id="joke">
+			<iframe src="https://www.scoopwhoop.com/laugh/?ref=nav_bottom" style="position: fixed; height: 100%; border: none;"></iframe>
+			
+		</div>
+		<div id="music">
+			<iframe src="https://free-meditation-music.com/" style="position: fixed; height: 100%; border: none;"></iframe>
+			
+		</div>
+		<div id="fquiz">
+			<iframe src="https://www.scoopwhoop.com/humor/which-2019-desi-meme-are-you/?ref=play_hot" style="position: fixed; height: 100%; border: none;"></iframe>
+			
+		</div>
+		<div id="mythnfact">
+			<iframe src="https://cmha.ca/documents/myths-about-mental-illness" style="position: fixed; height: 100%; border: none;"></iframe>
+			
+		</div>
+		<div id="mychart">
+			<canvas id="myChart" width="100px" height="100px"></canvas>
+		</div>
+
+		
+		
+			<!-- <div class = 'chatBox' id="cbt">
+			</div>
+			<input id="input" type="text" style="width: 430px;"> <button id="rec" style="width: 50px;">send</button> -->
+		
 
 		<!-- <div class="container fh5co-hero-inner">
 			<h1 class="animated fadeIn wow" data-wow-delay="0.4s">A Free HTML5 App Template Built with Bootstrap 4</h1>
