@@ -16,6 +16,9 @@ html {
 #login_div{
   display: block;
 }
+#bot{
+  display: none;
+}
 #joke{
   display: none;
   
