@@ -6,6 +6,19 @@ var mmusic = document.getElementById("mmusic");
 var fquiz = document.getElementById('fquizb');
 var fm = document.getElementById('fm');
 var ins = document.getElementById('ins');
+var chatbot = document.getElementById('chatbot');
+chatbot.addEventListener('click',chatui);
+function chatui() {
+    document.getElementById("mychart").style.display = "none";
+    document.getElementById("home").style.display = "none";
+    document.getElementById("joke").style.display = "none";
+    document.getElementById("music").style.display = "none";
+    document.getElementById("login_div").style.display = "none";
+    document.getElementById("fquiz").style.display = "none";
+    document.getElementById("mythnfact").style.display = "none";
+    document.getElementById("bot").style.display = "block";
+
+}
 ins.addEventListener('click',chartIt)
 var values=[];
 var labels=[];
@@ -39,6 +52,8 @@ async function chartIt() {
     document.getElementById("login_div").style.display = "none";
     document.getElementById("fquiz").style.display = "none";
     document.getElementById("mythnfact").style.display = "none";
+    document.getElementById("bot").style.display = "none";
+
     var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
         type: 'bar',
@@ -99,6 +114,7 @@ function facts() {
     document.getElementById("fquiz").style.display = "none";
     document.getElementById("mythnfact").style.display = "block";
     document.getElementById("mychart").style.display = "none";
+    document.getElementById("bot").style.display = "none";
 }
 fquiz.addEventListener('click',quiz);
 function quiz() {
@@ -109,6 +125,7 @@ function quiz() {
     document.getElementById("fquiz").style.display = "block";
     document.getElementById("mythnfact").style.display = "none";
     document.getElementById("mychart").style.display = "none";
+    document.getElementById("bot").style.display = "none";
 }
 mmusic.addEventListener('click',omusic);
 function home1(){
@@ -119,6 +136,7 @@ function home1(){
     document.getElementById("fquiz").style.display = "none";
     document.getElementById("mythnfact").style.display = "none";
     document.getElementById("mychart").style.display = "none";
+    document.getElementById("bot").style.display = "none";
 }
 
 
@@ -130,6 +148,7 @@ function omusic(){
     document.getElementById("fquiz").style.display = "none";
     document.getElementById("mythnfact").style.display = "none";
     document.getElementById("mychart").style.display = "none";
+    document.getElementById("bot").style.display = "none";
 }
 
 openj.addEventListener('click',openjoke);
@@ -141,6 +160,7 @@ function openjoke() {
     document.getElementById("fquiz").style.display = "none";
     document.getElementById("mythnfact").style.display = "none";
     document.getElementById("mychart").style.display = "none";
+    document.getElementById("bot").style.display = "none";
 }
 
 login.addEventListener('click',signin);
@@ -173,6 +193,7 @@ function signin() {
         document.getElementById("fquiz").style.display = "none";
         document.getElementById("mythnfact").style.display = "none";
         document.getElementById("mychart").style.display = "none";
+        document.getElementById("bot").style.display = "none";
       
     }
 firebase.auth().onAuthStateChanged(function(user) {
@@ -186,6 +207,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("fquiz").style.display = "none";
     document.getElementById("mythnfact").style.display = "none";
     document.getElementById("mychart").style.display = "none";
+    document.getElementById("bot").style.display = "none";
         console.log("good")
     
       
